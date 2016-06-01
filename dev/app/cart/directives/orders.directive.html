@@ -1,0 +1,9 @@
+<aside ng-show="ordersController.ordersCount" class="cart__orders">
+	<div class="cart__orders-header"><span class="cart__orders-ordername">item</span><span class="cart__orders-orderprice">price</span></div>
+	<div ng-repeat="order in ordersController.orders" class="cart__order"><span class="cart__order-name">{{:: order.name }}</span><span class="cart__order-price">{{:: order.price }}</span>
+		<button ng-click="ordersController.togglePopover(order)" class="cart__order-btn"></button>
+		<div ng-show="ordersController.activePopover === order.orderId" class="cart__order-popover">
+			<div class="arrow"></div><a href="javasript:void(0)" class="edit"><i aria-hidden="true" class="fa fa-pencil"></i></a><a href="javascript:void(0)" ng-click="ordersController.removeOrder(order)" class="remove"><i aria-hidden="true" class="fa fa-times"></i></a></div>
+	</div>
+	<button class="cart__orders-orderbtn">order</button>
+</aside>

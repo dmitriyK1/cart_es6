@@ -1,0 +1,10 @@
+<div class="products">
+	<div ng-repeat="product in productsListController.products | filter: productsListController.category | filter: productsListController.search track by $index" class="products__product fadeIn wow"><img ng-src="{{ product.img }}" class="products__product-img" />
+		<div class="products__product-info">
+			<div ng-bind="product.name" class="products__product-name"></div>
+			<div ng-bind="product.description" class="products__product-descr"></div>
+			<div class="products__product-price">Price:<span ng-bind="product.price"></span></div>
+		</div>
+		<button class="products__product-btn"><span ui-sref="cart" class="products__product-cart"></span><span ng-click="productsListController.add(product)" class="products__product-btntext">Add to cart</span></button>
+	</div>
+</div>

@@ -1,0 +1,25 @@
+[{
+	"name": "computer",
+	"className": "computer"
+}, {
+	"name": "smart phone",
+	"className": "phone"
+}, {
+	"name": "apple store",
+	"className": "apple"
+}, {
+	"name": "camera",
+	"className": "camera"
+}, {
+	"name": "tv & audio",
+	"className": "audio"
+}, {
+	"name": "game & video",
+	"className": "game"
+}, {
+	"name": "car electronic",
+	"className": "car"
+}, {
+	"name": "accessories",
+	"className": "accessories"
+}]
