@@ -1,6 +1,6 @@
 class Cart {
 	constructor() {
-		this.templateUrl  = 'app/cart/cartView.html';
+		this.templateUrl  = 'app/cart/cart.view.html';
 		this.controller   = 'CartController';
 		this.controllerAs = 'cartController';
 	}

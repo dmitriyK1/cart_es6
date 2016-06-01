@@ -1,6 +1,6 @@
 class Shop {
 	constructor() {
-		this.templateUrl  = 'app/shop/shopView.html';
+		this.templateUrl  = 'app/shop/shop.view.html';
 		this.controller   = 'ShopController';
 		this.controllerAs = 'shopController';
 	}
