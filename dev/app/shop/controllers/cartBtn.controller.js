@@ -1,4 +1,5 @@
 class CartbtnController {
+	// @ngInject
 	constructor($rootScope, $scope, cartService) {
 		var vm = this;
 		var subscription = $rootScope.$on('product:add', onProductAdd);

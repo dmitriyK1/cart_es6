@@ -30,7 +30,8 @@ const output = {
 
 // Faster development specific options, such as cheap-module-eval-source-map
 // and eval, produce lower quality sourcemaps.
-const devtool = 'eval-source-map';
+// const devtool = 'eval-source-map';
+const devtool = false;
 
 const devServer = {
   contentBase: PATHS.build,
@@ -76,8 +77,8 @@ const jsLoader = {
 
   // Options to configure babel with
   query: {
-    plugins: ['transform-runtime'],
-    presets: ['es2015', 'stage-0', 'react']
+    // plugins: ['transform-runtime'],
+    presets: ['es2015']
   }
 };
 
@@ -115,11 +116,11 @@ var module = {
 
   loaders: [
     jsLoader,
-    imagesLoader,
-    cssLoader,
-    stylusLoader,
-    coffeeLoader,
-    jadeLoader
+    // imagesLoader,
+    // cssLoader,
+    // stylusLoader,
+    // coffeeLoader,
+    // jadeLoader
   ]
 
 };
