@@ -1,18 +1,18 @@
 class Dataservice {
 	/* @ngInject */
-	constructor($http, PRODUCTS_URL, CATEGORIES_URL) {
+	constructor($http, constants) {
 		var service = this;
 		service.loadProducts   = loadProducts;
 		service.loadCategories = loadCategories;
 
 		function loadProducts() {
-			return $http.get(PRODUCTS_URL)
+			return $http.get(constants.PRODUCTS_URL)
 				.then(service.getData)
 				.catch(service.getDataFailed);
 		}
 
 		function loadCategories() {
-			return $http.get(CATEGORIES_URL)
+			return $http.get(constants.CATEGORIES_URL)
 				.then(service.getData)
 				.catch(service.getDataFailed);
 		}

@@ -1,6 +1,6 @@
 class Viewport {
 	/* @ngInject */
-	constructor($window, debounce, MOBILE_WIDTH) {
+	constructor($window, debounce, constants) {
 		var isMobile = false;
 
 		this.initialize    = initialize;
@@ -21,7 +21,7 @@ class Viewport {
 		}
 
 		function compare() {
-			return document.documentElement.clientWidth < MOBILE_WIDTH;
+			return document.documentElement.clientWidth < constants.MOBILE_WIDTH;
 		}
 	}
 }

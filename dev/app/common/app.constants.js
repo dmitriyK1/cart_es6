@@ -1,5 +1,7 @@
-angular
-	.module('app.core')
-	.constant('PRODUCTS_URL', 'app/products.json')
-	.constant('CATEGORIES_URL', 'app/categories.json')
-	.constant('MOBILE_WIDTH', 740);
+const constants = {
+	'PRODUCTS_URL': 'app/products.json',
+	'CATEGORIES_URL': 'app/categories.json',
+	'MOBILE_WIDTH': 740
+};
+
+export default constants;
