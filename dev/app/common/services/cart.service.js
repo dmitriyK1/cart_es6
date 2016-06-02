@@ -1,6 +1,6 @@
 class CartService {
 	/* @ngInject */
-	constructor($rootScope) {
+	constructor($rootScope, $q) {
 		var orderedProducts = [];
 
 		this.getProducts   = getProducts;
@@ -8,7 +8,9 @@ class CartService {
 		this.removeProduct = removeProduct;
 
 		function getProducts() {
-			return orderedProducts;
+			var deferred = $q.defer();
+			deferred.resolve(orderedProducts);
+			return deferred.promise
 		}
 
 		function addProduct(product) {

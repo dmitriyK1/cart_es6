@@ -6,7 +6,13 @@ class CartbtnController {
 
 		$scope.$on('$destroy', subscription);
 
-		vm.orderCount = cartService.getProducts().length;
+		cartService
+			.getProducts()
+			.then(onGetProducts);
+
+		function onGetProducts(orders) {
+			vm.orderCount = orders.length;
+		}
 
 		function onProductAdd(e, orders) {
 			vm.orderCount = orders.length;

@@ -36583,8 +36583,12 @@
 		}
 
 		function updateOrdersInfo() {
-			vm.orders = cartService.getProducts();
-			vm.ordersCount = vm.orders.length;
+			cartService.getProducts().then(onGetProducts);
+		}
+
+		function onGetProducts(orders) {
+			vm.orders = orders;
+			vm.ordersCount = orders.length;
 		}
 
 		function removeOrder(order) {
@@ -36826,7 +36830,7 @@
 	var CartService = function () {
 		/* @ngInject */
 
-		function CartService($rootScope) {
+		function CartService($rootScope, $q) {
 			_classCallCheck(this, CartService);
 
 			var orderedProducts = [];
@@ -36836,7 +36840,9 @@
 			this.removeProduct = removeProduct;
 
 			function getProducts() {
-				return orderedProducts;
+				var deferred = $q.defer();
+				deferred.resolve(orderedProducts);
+				return deferred.promise;
 			}
 
 			function addProduct(product) {
@@ -37063,7 +37069,11 @@
 
 		$scope.$on('$destroy', subscription);
 
-		vm.orderCount = cartService.getProducts().length;
+		cartService.getProducts().then(onGetProducts);
+
+		function onGetProducts(orders) {
+			vm.orderCount = orders.length;
+		}
 
 		function onProductAdd(e, orders) {
 			vm.orderCount = orders.length;

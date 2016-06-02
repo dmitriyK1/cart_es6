@@ -2,7 +2,7 @@ class OrdersController {
 
 	/* @ngInject */
 	constructor($rootScope, $scope, cartService) {
-		var vm = this;
+		var vm           = this;
 		vm.togglePopover = togglePopover;
 		vm.removeOrder   = removeOrder;
 
@@ -25,8 +25,14 @@ class OrdersController {
 		}
 
 		function updateOrdersInfo() {
-			vm.orders      = cartService.getProducts();
-			vm.ordersCount = vm.orders.length;
+			cartService
+				.getProducts()
+				.then(onGetProducts);
+		}
+
+		function onGetProducts(orders) {
+			vm.orders      = orders;
+			vm.ordersCount = orders.length;
 		}
 
 		function removeOrder(order) {
