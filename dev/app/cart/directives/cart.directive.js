@@ -1,8 +1,7 @@
 class Cart {
 	constructor() {
 		this.templateUrl  = 'app/cart/cart.view.html';
-		this.controller   = 'CartController';
-		this.controllerAs = 'cartController';
+		this.controller   = 'CartController as cartController';
 	}
 
 	static directiveFactory() {

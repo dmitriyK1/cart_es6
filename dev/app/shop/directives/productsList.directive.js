@@ -6,8 +6,7 @@ class ProductsList {
 		};
 
 		this.templateUrl      = 'app/shop/productsList.directive.html';
-		this.controller       = 'ProductsListController';
-		this.controllerAs     = 'productsListController';
+		this.controller       = 'ProductsListController as productsListController';
 		this.bindToController = true;
 	}
 

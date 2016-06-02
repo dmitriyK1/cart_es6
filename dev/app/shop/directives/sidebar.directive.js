@@ -5,8 +5,7 @@ function sidebar($document, dataservice, viewport) {
 			activeCategory: '=category'
 		},
 		templateUrl: 'app/shop/sidebar.directive.html',
-		controller: 'SidebarController',
-		controllerAs: 'sidebarController',
+		controller: 'SidebarController as sidebarController',
 		link: link,
 		bindToController: true
 	};

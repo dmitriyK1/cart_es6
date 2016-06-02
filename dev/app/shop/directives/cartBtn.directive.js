@@ -3,8 +3,7 @@ class CartBtn {
 	constructor() {
 		this.scope        = {};
 		this.templateUrl  = 'app/shop/cartBtn.directive.html';
-		this.controller   = 'CartbtnController';
-		this.controllerAs = 'cartbtnController';
+		this.controller   = 'CartbtnController as cartbtnController';
 	}
 
 	static directiveFactory() {

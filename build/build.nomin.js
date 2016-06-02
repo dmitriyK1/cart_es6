@@ -36621,8 +36621,7 @@
 			_classCallCheck(this, Cart);
 
 			this.templateUrl = 'app/cart/cart.view.html';
-			this.controller = 'CartController';
-			this.controllerAs = 'cartController';
+			this.controller = 'CartController as cartController';
 		}
 
 		_createClass(Cart, null, [{
@@ -36656,8 +36655,7 @@
 			_classCallCheck(this, Orders);
 
 			this.templateUrl = 'app/cart/orders.directive.html';
-			this.controller = 'OrdersController';
-			this.controllerAs = 'ordersController';
+			this.controller = 'OrdersController as ordersController';
 		}
 
 		_createClass(Orders, null, [{
@@ -37211,8 +37209,7 @@
 
 			this.scope = {};
 			this.templateUrl = 'app/shop/cartBtn.directive.html';
-			this.controller = 'CartbtnController';
-			this.controllerAs = 'cartbtnController';
+			this.controller = 'CartbtnController as cartbtnController';
 		}
 
 		_createClass(CartBtn, null, [{
@@ -37251,8 +37248,7 @@
 			};
 
 			this.templateUrl = 'app/shop/productsList.directive.html';
-			this.controller = 'ProductsListController';
-			this.controllerAs = 'productsListController';
+			this.controller = 'ProductsListController as productsListController';
 			this.bindToController = true;
 		}
 
@@ -37287,8 +37283,7 @@
 			_classCallCheck(this, Shop);
 
 			this.templateUrl = 'app/shop/shop.view.html';
-			this.controller = 'ShopController';
-			this.controllerAs = 'shopController';
+			this.controller = 'ShopController as shopController';
 		}
 
 		_createClass(Shop, null, [{
@@ -37319,8 +37314,7 @@
 				activeCategory: '=category'
 			},
 			templateUrl: 'app/shop/sidebar.directive.html',
-			controller: 'SidebarController',
-			controllerAs: 'sidebarController',
+			controller: 'SidebarController as sidebarController',
 			link: link,
 			bindToController: true
 		};
