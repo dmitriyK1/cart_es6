@@ -1,5 +1,5 @@
 <div class="products">
-	<div ng-repeat="product in productsListController.products | filter: productsListController.category | filter: productsListController.search track by $index" class="products__product fadeIn wow"><img ng-src="{{ product.img }}" class="products__product-img" />
+	<div ng-repeat="product in productsListController.products | filter: productsListController.category | filter: productsListController.search track by product.id" class="products__product fadeIn wow"><img ng-src="{{ product.img }}" class="products__product-img" />
 		<div class="products__product-info">
 			<div ng-bind="product.name" class="products__product-name"></div>
 			<div ng-bind="product.description" class="products__product-descr"></div>
