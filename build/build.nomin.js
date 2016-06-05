@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(34);
+	module.exports = __webpack_require__(35);
 
 
 /***/ },
@@ -758,7 +758,7 @@
 	  };
 	}]);
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(35)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(36)(module)))
 
 /***/ },
 /* 4 */
@@ -36394,23 +36394,23 @@
 
 	__webpack_require__(2);
 
-	var _dataservice = __webpack_require__(21);
+	var _dataservice = __webpack_require__(22);
 
 	var _dataservice2 = _interopRequireDefault(_dataservice);
 
-	var _animations = __webpack_require__(19);
+	var _animations = __webpack_require__(20);
 
 	var _animations2 = _interopRequireDefault(_animations);
 
-	var _routing = __webpack_require__(22);
+	var _routing = __webpack_require__(23);
 
 	var _routing2 = _interopRequireDefault(_routing);
 
-	var _viewport = __webpack_require__(23);
+	var _viewport = __webpack_require__(24);
 
 	var _viewport2 = _interopRequireDefault(_viewport);
 
-	var _app = __webpack_require__(17);
+	var _app = __webpack_require__(18);
 
 	var _app2 = _interopRequireDefault(_app);
 
@@ -36438,7 +36438,7 @@
 
 	var _appWidgets2 = _interopRequireDefault(_appWidgets);
 
-	var _shop = __webpack_require__(33);
+	var _shop = __webpack_require__(34);
 
 	var _shop2 = _interopRequireDefault(_shop);
 
@@ -36446,21 +36446,25 @@
 
 	var _cart2 = _interopRequireDefault(_cart);
 
-	var _app = __webpack_require__(16);
+	var _app = __webpack_require__(17);
 
 	var _app2 = _interopRequireDefault(_app);
 
-	var _cart3 = __webpack_require__(20);
+	var _cart3 = __webpack_require__(21);
 
 	var _cart4 = _interopRequireDefault(_cart3);
 
-	var _app3 = __webpack_require__(15);
+	var _app3 = __webpack_require__(16);
 
 	var _app4 = _interopRequireDefault(_app3);
 
+	var _app5 = __webpack_require__(15);
+
+	var _app6 = _interopRequireDefault(_app5);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var appModule = angular.module('app', [_appCore2.default.name, _appWidgets2.default.name, _shop2.default.name, _cart2.default.name]).constant('constants', _app4.default).config(_app2.default).service('cartService', _cart4.default);
+	var appModule = angular.module('app', [_appCore2.default.name, _appWidgets2.default.name, _shop2.default.name, _cart2.default.name]).constant('constants', _app4.default).config(_app2.default).config(_app6.default).service('cartService', _cart4.default);
 
 	exports.default = appModule;
 
@@ -36474,7 +36478,7 @@
 		value: true
 	});
 
-	var _toTop = __webpack_require__(18);
+	var _toTop = __webpack_require__(19);
 
 	var _toTop2 = _interopRequireDefault(_toTop);
 
@@ -36482,11 +36486,11 @@
 
 	var _orders2 = _interopRequireDefault(_orders);
 
-	var _cartBtn = __webpack_require__(29);
+	var _cartBtn = __webpack_require__(30);
 
 	var _cartBtn2 = _interopRequireDefault(_cartBtn);
 
-	var _cartBtn3 = __webpack_require__(25);
+	var _cartBtn3 = __webpack_require__(26);
 
 	var _cartBtn4 = _interopRequireDefault(_cartBtn3);
 
@@ -36674,6 +36678,23 @@
 /* 15 */
 /***/ function(module, exports) {
 
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	// @ngInject
+	function configure($httpProvider, $compileProvider) {
+		$httpProvider.defaults.cache = true;
+		$compileProvider.debugInfoEnabled = false;
+	}
+
+	exports.default = configure;
+
+/***/ },
+/* 16 */
+/***/ function(module, exports) {
+
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -36688,7 +36709,7 @@
 	exports.default = constants;
 
 /***/ },
-/* 16 */
+/* 17 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36712,7 +36733,7 @@
 	exports.default = config;
 
 /***/ },
-/* 17 */
+/* 18 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -36730,7 +36751,7 @@
 	exports.default = runBlock;
 
 /***/ },
-/* 18 */
+/* 19 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36781,7 +36802,7 @@
 	exports.default = toTop;
 
 /***/ },
-/* 19 */
+/* 20 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -36812,7 +36833,7 @@
 	exports.default = Animations;
 
 /***/ },
-/* 20 */
+/* 21 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36871,7 +36892,7 @@
 	exports.default = CartService;
 
 /***/ },
-/* 21 */
+/* 22 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36931,7 +36952,7 @@
 	exports.default = Dataservice;
 
 /***/ },
-/* 22 */
+/* 23 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36973,7 +36994,7 @@
 	exports.default = Routing;
 
 /***/ },
-/* 23 */
+/* 24 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -37016,7 +37037,7 @@
 	exports.default = Viewport;
 
 /***/ },
-/* 24 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37046,7 +37067,7 @@
 	};
 
 /***/ },
-/* 25 */
+/* 26 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -37081,7 +37102,7 @@
 	exports.default = CartbtnController;
 
 /***/ },
-/* 26 */
+/* 27 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -37122,7 +37143,7 @@
 	exports.default = ProductsListController;
 
 /***/ },
-/* 27 */
+/* 28 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -37140,7 +37161,7 @@
 	exports.default = ShopController;
 
 /***/ },
-/* 28 */
+/* 29 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -37188,7 +37209,7 @@
 	exports.default = SidebarController;
 
 /***/ },
-/* 29 */
+/* 30 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -37225,7 +37246,7 @@
 	exports.default = CartBtn.directiveFactory;
 
 /***/ },
-/* 30 */
+/* 31 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -37265,7 +37286,7 @@
 	exports.default = ProductsList.directiveFactory;
 
 /***/ },
-/* 31 */
+/* 32 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -37299,7 +37320,7 @@
 	exports.default = Shop.directiveFactory;
 
 /***/ },
-/* 32 */
+/* 33 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -37342,7 +37363,7 @@
 	exports.default = sidebar;
 
 /***/ },
-/* 33 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37351,27 +37372,27 @@
 		value: true
 	});
 
-	var _productsList = __webpack_require__(26);
+	var _productsList = __webpack_require__(27);
 
 	var _productsList2 = _interopRequireDefault(_productsList);
 
-	var _shop = __webpack_require__(27);
+	var _shop = __webpack_require__(28);
 
 	var _shop2 = _interopRequireDefault(_shop);
 
-	var _sidebar = __webpack_require__(28);
+	var _sidebar = __webpack_require__(29);
 
 	var _sidebar2 = _interopRequireDefault(_sidebar);
 
-	var _productsList3 = __webpack_require__(30);
+	var _productsList3 = __webpack_require__(31);
 
 	var _productsList4 = _interopRequireDefault(_productsList3);
 
-	var _shop3 = __webpack_require__(31);
+	var _shop3 = __webpack_require__(32);
 
 	var _shop4 = _interopRequireDefault(_shop3);
 
-	var _sidebar3 = __webpack_require__(32);
+	var _sidebar3 = __webpack_require__(33);
 
 	var _sidebar4 = _interopRequireDefault(_sidebar3);
 
@@ -37382,15 +37403,15 @@
 	exports.default = shopModule;
 
 /***/ },
-/* 34 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(24);
+	__webpack_require__(25);
 
 /***/ },
-/* 35 */
+/* 36 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
